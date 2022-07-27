@@ -104,10 +104,12 @@ Begin VB.Form ConsultaPaciente
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
+         ForeColor       =   &H00E0E0E0&
          Height          =   420
          Left            =   2820
+         MaxLength       =   10
          TabIndex        =   25
-         Text            =   "00000000"
+         Text            =   "00 000 000"
          Top             =   210
          Width           =   1905
       End
@@ -563,13 +565,6 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-
-Private Sub CmdNuevo_Click()
-
-Altapaciente.Show
-
-End Sub
-
 Private Sub CmdClose_Click()
 
 Unload Me
@@ -579,5 +574,30 @@ End Sub
 Private Sub CmdNuevoP_Click()
 
 Altapaciente.Show , Me
+
+End Sub
+
+Private Sub TxtDNI_Change()
+
+If Txtdni.Text <> "00 000 000" Then
+    Txtdni.ForeColor = &H80000008
+Else
+    Txtdni.ForeColor = &HE0E0E0
+End If
+
+End Sub
+
+Private Sub Txtdni_GotFocus()
+
+Txtdni.SelStart = 0
+Txtdni.SelLength = Len(Txtdni.Text)
+
+End Sub
+
+Private Sub TxtDNI_KeyPress(KeyAscii As Integer)
+
+If KeyAscii = 13 Then
+    'CmdBuscar.SetFocus
+End If
 
 End Sub

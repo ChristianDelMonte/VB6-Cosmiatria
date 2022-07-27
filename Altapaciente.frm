@@ -1,4 +1,5 @@
 VERSION 5.00
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
 Begin VB.Form Altapaciente 
    Caption         =   "Alta de Pacientes"
    ClientHeight    =   3090
@@ -10,6 +11,30 @@ Begin VB.Form Altapaciente
    ScaleHeight     =   3090
    ScaleWidth      =   9285
    StartUpPosition =   3  'Windows Default
+   Begin MSMask.MaskEdBox Txtnac2 
+      Height          =   375
+      Left            =   2220
+      TabIndex        =   29
+      Top             =   2640
+      Width           =   1575
+      _ExtentX        =   2778
+      _ExtentY        =   661
+      _Version        =   393216
+      ForeColor       =   14737632
+      MaxLength       =   10
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   "dd-mm-yyyy"
+      Mask            =   "99/99/9999"
+      PromptChar      =   "_"
+   End
    Begin VB.TextBox Txtlocalidad 
       BeginProperty Font 
          Name            =   "MS Sans Serif"
@@ -245,6 +270,7 @@ Begin VB.Form Altapaciente
          ForeColor       =   &H00E0E0E0&
          Height          =   345
          Left            =   1680
+         MaxLength       =   10
          TabIndex        =   1
          Text            =   "00 000 000"
          Top             =   240
@@ -492,7 +518,7 @@ End If
 
 End Sub
 
-Private Sub Txtdni_Change()
+Private Sub TxtDNI_Change()
 
 If Txtdni.Text <> "00 000 000" Then
     Txtdni.ForeColor = &H80000008
@@ -509,7 +535,7 @@ Txtdni.SelLength = Len(Txtdni.Text)
 
 End Sub
 
-Private Sub Txtdni_KeyPress(KeyAscii As Integer)
+Private Sub TxtDNI_KeyPress(KeyAscii As Integer)
 
 If KeyAscii = 13 Then
     Txtnombre.SetFocus

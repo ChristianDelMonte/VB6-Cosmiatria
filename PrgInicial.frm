@@ -7,7 +7,6 @@ Begin VB.MDIForm PrgInicial
    ClientTop       =   405
    ClientWidth     =   11670
    LinkTopic       =   "MDIForm1"
-   Picture         =   "PrgInicial.frx":0000
    StartUpPosition =   3  'Windows Default
    WindowState     =   2  'Maximized
 End

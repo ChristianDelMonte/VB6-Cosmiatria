@@ -6,7 +6,7 @@ Option Explicit
 '// programa para Consultorio de Estetica y cosmiatria.
 '// ************************************************************
 '// Fecha de inicio: 20-06-2022
-'// Ultima modificación / correccion: 20-06-2022
+'// Ultima modificación / correccion: 09-07-2022
 '// ************************************************************
 '// Prog.: Christian A. Del Monte - Programador
 '//        Correo: creadig@gmail.com / creadig@hotmail.com
@@ -78,7 +78,8 @@ Public Const FileFicha = "\data\Fichas.fch"
 Public Const FileSesion = "\data\Sesiones.ssn"
 
 '// ***************************************************************************************************
-'/// Funcion para guardar los pacientes
+'/// Funcion para guardar los datos de los pacientes
+'/// retorna True si la operación es exitosa o False caso contrario
 Public Function GuardaPaciente(Dato As DataPaciente, WOptionalID As Long) As Boolean
 
 Dim LastReg As Long
@@ -88,6 +89,9 @@ Dim LastReg As Long
 Open App.Path & FilePaciente For Random As #12 Len = Len(Paciente)
 
 '/// chequeamos por el ID de registro a guardar
+'/// Si WOptionalID es 0 o -1 se guardaran los datos en el ultimo registro
+'/// disponible en el archivo. Caso contrario se guardará en el registro
+'/// correspondente, por ej.: una actualizacion de registro o datos.
 If WOptionalID = 0 Or WOptionalID = -1 Then
     LastReg = LOF(12) \ Len(Paciente)
     LastReg = LastReg + 1
