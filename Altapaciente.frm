@@ -1,406 +1,506 @@
 VERSION 5.00
-Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
 Begin VB.Form Altapaciente 
+   BorderStyle     =   1  'Fixed Single
    Caption         =   "Alta de Pacientes"
-   ClientHeight    =   3090
-   ClientLeft      =   60
-   ClientTop       =   405
-   ClientWidth     =   9285
+   ClientHeight    =   3735
+   ClientLeft      =   -15
+   ClientTop       =   330
+   ClientWidth     =   9750
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
-   ScaleHeight     =   3090
-   ScaleWidth      =   9285
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
+   ScaleHeight     =   3735
+   ScaleWidth      =   9750
    StartUpPosition =   3  'Windows Default
-   Begin MSMask.MaskEdBox Txtnac2 
-      Height          =   375
-      Left            =   2220
-      TabIndex        =   29
-      Top             =   2640
-      Width           =   1575
-      _ExtentX        =   2778
-      _ExtentY        =   661
-      _Version        =   393216
-      ForeColor       =   14737632
-      MaxLength       =   10
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "MS Sans Serif"
-         Size            =   12
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Format          =   "dd-mm-yyyy"
-      Mask            =   "99/99/9999"
-      PromptChar      =   "_"
-   End
-   Begin VB.TextBox Txtlocalidad 
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   12
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00E0E0E0&
-      Height          =   345
-      Left            =   6720
-      TabIndex        =   6
-      Text            =   "localidad o provincia"
-      Top             =   1140
-      Width           =   2235
-   End
    Begin VB.CommandButton Cmdcancelar 
       Caption         =   "&Cancelar"
       Height          =   405
       Left            =   7800
-      TabIndex        =   14
-      Top             =   2580
+      TabIndex        =   1
+      Top             =   3000
       Width           =   1365
    End
    Begin VB.CommandButton Cmdguardar 
       Caption         =   "&Guardar"
       Height          =   405
-      Left            =   6240
-      TabIndex        =   13
-      Top             =   2580
+      Left            =   6180
+      TabIndex        =   0
+      Top             =   3000
       Width           =   1395
    End
-   Begin VB.Frame Frame3 
-      Height          =   2295
-      Left            =   90
-      TabIndex        =   0
-      Top             =   120
-      Width           =   9075
-      Begin VB.TextBox Txtapellido 
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   345
-         Left            =   4380
+   Begin VB.PictureBox Picture1 
+      Appearance      =   0  'Flat
+      AutoRedraw      =   -1  'True
+      BackColor       =   &H80000005&
+      BorderStyle     =   0  'None
+      ForeColor       =   &H80000008&
+      Height          =   3315
+      Left            =   210
+      ScaleHeight     =   3315
+      ScaleWidth      =   9285
+      TabIndex        =   2
+      Top             =   210
+      Width           =   9285
+      Begin Proyecto1.ucText Txtdni 
+         Height          =   375
+         Left            =   1770
          TabIndex        =   3
-         Text            =   "apellido"
-         Top             =   630
-         Width           =   2445
-      End
-      Begin VB.TextBox Txthijos 
-         Alignment       =   2  'Center
-         BeginProperty Font 
+         Top             =   270
+         Width           =   1875
+         _ExtentX        =   3307
+         _ExtentY        =   661
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
-            Size            =   12
+            Size            =   8.25
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   420
-         Left            =   8280
-         TabIndex        =   12
-         Text            =   "3"
-         Top             =   1800
-         Width           =   555
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         InputType       =   1
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":0000
+         ImgRight        =   "Altapaciente.frx":0018
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":0030
       End
-      Begin VB.TextBox Txtedad 
-         Alignment       =   2  'Center
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   420
-         Left            =   7650
+      Begin Proyecto1.ucText Txtnombre 
+         Height          =   345
+         Left            =   1770
          TabIndex        =   4
-         Text            =   "35"
-         Top             =   570
-         Width           =   555
-      End
-      Begin VB.TextBox TxtOcupacion 
-         BeginProperty Font 
+         Top             =   720
+         Width           =   1875
+         _ExtentX        =   3307
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
-            Size            =   12
+            Size            =   8.25
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   360
-         Left            =   4500
-         TabIndex        =   11
-         Text            =   "ocupación"
-         Top             =   1800
-         Width           =   2625
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":0060
+         ImgRight        =   "Altapaciente.frx":0078
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":0090
       End
-      Begin VB.TextBox Txtotrocel 
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   345
-         Left            =   7050
-         TabIndex        =   9
-         Text            =   "000-0000000"
-         Top             =   1410
-         Width           =   1815
-      End
-      Begin VB.TextBox Txtcel 
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00E0E0E0&
+      Begin Proyecto1.ucText Txtapellido 
          Height          =   345
          Left            =   4500
-         TabIndex        =   8
-         Text            =   "000-0000000"
-         Top             =   1410
-         Width           =   1845
-      End
-      Begin VB.TextBox TxtEstado 
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   345
-         Left            =   1680
-         TabIndex        =   10
-         Text            =   "estado civil"
-         Top             =   1800
-         Width           =   1665
-      End
-      Begin VB.TextBox Txtnac 
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   345
-         Left            =   1680
-         TabIndex        =   7
-         Text            =   "00-00-0000"
-         Top             =   1410
-         Width           =   1665
-      End
-      Begin VB.TextBox Txtdomicilio 
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   12
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   345
-         Left            =   1680
          TabIndex        =   5
-         Text            =   "domicilio"
-         Top             =   1020
-         Width           =   3075
-      End
-      Begin VB.TextBox Txtnombre 
-         BeginProperty Font 
+         Top             =   720
+         Width           =   2325
+         _ExtentX        =   4101
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
-            Size            =   12
+            Size            =   8.25
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ForeColor       =   &H00E0E0E0&
-         Height          =   345
-         Left            =   1680
-         TabIndex        =   2
-         Text            =   "nombre"
-         Top             =   630
-         Width           =   1845
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":00BC
+         ImgRight        =   "Altapaciente.frx":00D4
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":00EC
       End
-      Begin VB.TextBox Txtdni 
-         BeginProperty Font 
+      Begin Proyecto1.ucText Txtdomicilio 
+         Height          =   345
+         Left            =   1770
+         TabIndex        =   6
+         Top             =   1140
+         Width           =   2865
+         _ExtentX        =   5054
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "MS Sans Serif"
-            Size            =   12
+            Size            =   8.25
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         ForeColor       =   &H00E0E0E0&
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":011C
+         ImgRight        =   "Altapaciente.frx":0134
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":014C
+      End
+      Begin Proyecto1.ucText Txtlocalidad 
          Height          =   345
-         Left            =   1680
-         MaxLength       =   10
-         TabIndex        =   1
-         Text            =   "00 000 000"
-         Top             =   240
-         Width           =   2355
+         Left            =   6810
+         TabIndex        =   7
+         Top             =   1140
+         Width           =   2175
+         _ExtentX        =   3836
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":017E
+         ImgRight        =   "Altapaciente.frx":0196
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":01AE
       End
-      Begin VB.Label Label7 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Localidad / provincia::"
-         Height          =   225
-         Left            =   4950
-         TabIndex        =   28
-         Top             =   1110
-         Width           =   1635
+      Begin Proyecto1.ucText Txtnac 
+         Height          =   345
+         Left            =   1770
+         TabIndex        =   8
+         Top             =   1560
+         Width           =   1665
+         _ExtentX        =   2937
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         InputType       =   2
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":01E0
+         ImgRight        =   "Altapaciente.frx":01F8
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":0210
       End
-      Begin VB.Label Label5 
+      Begin Proyecto1.ucText Txtestado 
+         Height          =   345
+         Left            =   1770
+         TabIndex        =   9
+         Top             =   1980
+         Width           =   1665
+         _ExtentX        =   2937
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":0244
+         ImgRight        =   "Altapaciente.frx":025C
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":0274
+      End
+      Begin Proyecto1.ucText Txtcel 
+         Height          =   345
+         Left            =   4500
+         TabIndex        =   10
+         Top             =   1560
+         Width           =   1905
+         _ExtentX        =   3360
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         InputType       =   1
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":02AC
+         ImgRight        =   "Altapaciente.frx":02C4
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":02DC
+      End
+      Begin Proyecto1.ucText Txtotrocel 
+         Height          =   345
+         Left            =   7170
+         TabIndex        =   11
+         Top             =   1560
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         InputType       =   1
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":0310
+         ImgRight        =   "Altapaciente.frx":0328
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":0340
+      End
+      Begin Proyecto1.ucText Txtocupacion 
+         Height          =   345
+         Left            =   4500
+         TabIndex        =   12
+         Top             =   1980
+         Width           =   2535
+         _ExtentX        =   4471
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":0374
+         ImgRight        =   "Altapaciente.frx":038C
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":03A4
+      End
+      Begin Proyecto1.ucText Txtedad 
+         Height          =   345
+         Left            =   7800
+         TabIndex        =   13
+         Top             =   720
+         Width           =   525
+         _ExtentX        =   926
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         InputType       =   1
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":03D6
+         ImgRight        =   "Altapaciente.frx":03EE
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":0406
+      End
+      Begin Proyecto1.ucText Txthijos 
+         Height          =   345
+         Left            =   8460
+         TabIndex        =   14
+         Top             =   1980
+         Width           =   525
+         _ExtentX        =   926
+         _ExtentY        =   609
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "MS Sans Serif"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   -2147483644
+         BackColor       =   -2147483644
+         ParentBackColor =   -2147483643
+         InputType       =   1
+         BorderRadius    =   6
+         TextConvert     =   2
+         ImgLeft         =   "Altapaciente.frx":042A
+         ImgRight        =   "Altapaciente.frx":0442
+         RightButtonStyle=   0
+         CueBanner       =   "Altapaciente.frx":045A
+      End
+      Begin VB.Label Label17 
          Alignment       =   1  'Right Justify
-         Caption         =   "Apellido:"
+         BackColor       =   &H80000005&
+         Caption         =   "Núm. Hijos:"
          Height          =   225
-         Left            =   3660
+         Left            =   7380
+         TabIndex        =   27
+         Top             =   2040
+         Width           =   1005
+      End
+      Begin VB.Label Label15 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H80000005&
+         Caption         =   "Ocupación:"
+         Height          =   225
+         Left            =   3480
          TabIndex        =   26
-         Top             =   690
-         Width           =   645
+         Top             =   2040
+         Width           =   945
       End
-      Begin VB.Label Label20 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Otro:"
+      Begin VB.Label Label14 
+         BackColor       =   &H80000005&
+         Caption         =   "Años."
          Height          =   225
-         Left            =   6420
+         Left            =   8430
          TabIndex        =   25
-         Top             =   1470
+         Top             =   780
          Width           =   525
       End
-      Begin VB.Label Label1 
+      Begin VB.Label Label12 
          Alignment       =   1  'Right Justify
-         Caption         =   "DNI:"
+         BackColor       =   &H80000005&
+         Caption         =   "Edad:"
          Height          =   225
-         Left            =   690
+         Left            =   7050
          TabIndex        =   24
-         Top             =   330
-         Width           =   885
+         Top             =   780
+         Width           =   675
       End
-      Begin VB.Label Label2 
+      Begin VB.Label Label10 
          Alignment       =   1  'Right Justify
-         Caption         =   "Nombre:"
+         BackColor       =   &H80000005&
+         Caption         =   "Estado Civil:"
          Height          =   225
-         Left            =   150
+         Left            =   270
          TabIndex        =   23
-         Top             =   690
-         Width           =   1425
-      End
-      Begin VB.Label Label3 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Domicilio:"
-         Height          =   225
-         Left            =   150
-         TabIndex        =   22
-         Top             =   1080
-         Width           =   1425
-      End
-      Begin VB.Label Label4 
-         Alignment       =   1  'Right Justify
-         Caption         =   "Fecha de Nac.:"
-         Height          =   225
-         Left            =   150
-         TabIndex        =   21
-         Top             =   1470
+         Top             =   2040
          Width           =   1425
       End
       Begin VB.Label Label8 
          Alignment       =   1  'Right Justify
+         BackColor       =   &H80000005&
          Caption         =   "Teléfono:"
          Height          =   225
-         Left            =   3480
-         TabIndex        =   20
-         Top             =   1470
+         Left            =   3540
+         TabIndex        =   22
+         Top             =   1620
          Width           =   885
       End
-      Begin VB.Label Label10 
+      Begin VB.Label Label4 
          Alignment       =   1  'Right Justify
-         Caption         =   "Estado Civil:"
+         BackColor       =   &H80000005&
+         Caption         =   "Fecha de Nac.:"
          Height          =   225
-         Left            =   150
-         TabIndex        =   19
-         Top             =   1860
+         Left            =   270
+         TabIndex        =   21
+         Top             =   1620
          Width           =   1425
       End
-      Begin VB.Label Label12 
+      Begin VB.Label Label3 
          Alignment       =   1  'Right Justify
-         Caption         =   "Edad:"
+         BackColor       =   &H80000005&
+         Caption         =   "Domicilio:"
          Height          =   225
-         Left            =   6930
+         Left            =   270
+         TabIndex        =   20
+         Top             =   1200
+         Width           =   1425
+      End
+      Begin VB.Label Label2 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H80000005&
+         Caption         =   "Nombre:"
+         Height          =   225
+         Left            =   270
+         TabIndex        =   19
+         Top             =   780
+         Width           =   1425
+      End
+      Begin VB.Label Label1 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H80000005&
+         Caption         =   "DNI:"
+         Height          =   225
+         Left            =   810
          TabIndex        =   18
-         Top             =   690
-         Width           =   675
+         Top             =   360
+         Width           =   885
       End
-      Begin VB.Label Label14 
-         Caption         =   "Años."
+      Begin VB.Label Label20 
+         Alignment       =   1  'Right Justify
+         BackColor       =   &H80000005&
+         Caption         =   "Otro:"
          Height          =   225
-         Left            =   8220
+         Left            =   6570
          TabIndex        =   17
-         Top             =   690
-         Width           =   675
+         Top             =   1620
+         Width           =   525
       End
-      Begin VB.Label Label15 
+      Begin VB.Label Label5 
          Alignment       =   1  'Right Justify
-         Caption         =   "Ocupación:"
+         BackColor       =   &H80000005&
+         Caption         =   "Apellido:"
          Height          =   225
-         Left            =   3420
+         Left            =   3780
          TabIndex        =   16
-         Top             =   1860
-         Width           =   945
+         Top             =   780
+         Width           =   645
       End
-      Begin VB.Label Label17 
+      Begin VB.Label Label7 
          Alignment       =   1  'Right Justify
-         Caption         =   "Núm. Hijos:"
+         BackColor       =   &H80000005&
+         Caption         =   "Localidad / provincia::"
          Height          =   225
-         Left            =   7230
+         Left            =   5100
          TabIndex        =   15
-         Top             =   1920
-         Width           =   1005
+         Top             =   1200
+         Width           =   1635
       End
-   End
-   Begin VB.Label Label6 
-      Alignment       =   1  'Right Justify
-      Caption         =   "Apellido:"
-      Height          =   225
-      Left            =   5070
-      TabIndex        =   27
-      Top             =   1200
-      Width           =   645
    End
 End
 Attribute VB_Name = "Altapaciente"
@@ -408,6 +508,9 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
+Option Explicit
+Private cShadow As ClsShadow
+
 Private Sub Cmdcancelar_Click()
 
 Unload Me
@@ -420,7 +523,7 @@ Private Sub Cmdguardar_Click()
 'pero antes realizamos algunas verificaciones
 Dim result As Boolean
 
-If Txtdni.Text <> "00 000 000" Then
+If Txtdni.Text <> "00000000" Then
     Paciente.DNI = Trim(Txtdni.Text)
 Else
     MsgBox "Por favor introduzca el DNI del paciente.", vbExclamation
@@ -428,7 +531,7 @@ Else
     Exit Sub
 End If
 
-If Txtnombre.Text <> "nombre" Then
+If LCase(Txtnombre.Text) <> "nombre" Then
     Paciente.Nombre = Trim(Txtnombre.Text)
 Else
     MsgBox "Por favor introduzca el Nombre del paciente.", vbExclamation
@@ -436,7 +539,7 @@ Else
     Exit Sub
 End If
 
-If Txtapellido.Text <> "apellido" Then
+If LCase(Txtapellido.Text) <> "apellido" Then
     Paciente.Apellido = Trim(Txtapellido.Text)
 Else
     MsgBox "Por favor introduzca el Apellido del paciente.", vbExclamation
@@ -445,12 +548,12 @@ Else
 End If
 
 If Txtedad.Text <> "3" Then Paciente.Edad = CLng(Txtedad.Text) Else Paciente.Edad = 0
-If Txtdomicilio.Text <> "domicilio" Then Paciente.Domicilio = Trim(Txtdomicilio.Text) Else Paciente.Domicilio = "no especificado"
-If Txtlocalidad.Text <> "localidad o provincia" Then Paciente.Localidad = Trim(Txtlocalidad.Text) Else Paciente.Localidad = "no especificado"
+If LCase(Txtdomicilio.Text) <> "domicilio" Then Paciente.Domicilio = Trim(Txtdomicilio.Text) Else Paciente.Domicilio = "no especificado"
+If LCase(Txtlocalidad.Text) <> "localidad o provincia" Then Paciente.Localidad = Trim(Txtlocalidad.Text) Else Paciente.Localidad = "no especificado"
 
 Paciente.FechaNac = Trim(Txtnac.Text)
 
-If Txtcel.Text <> "000-0000000" Then
+If Txtcel.Text <> "0000000000" Then
     Paciente.Telefono1 = Trim(Txtcel.Text)
 Else
     MsgBox "Por favor introduzca al menos un teléfono de contacto.", vbExclamation
@@ -460,12 +563,24 @@ End If
 
 Paciente.Telefono2 = Trim(Txtotrocel.Text)
 
-If TxtEstado <> "estado civil" Then Paciente.EstadoCivil = Trim(TxtEstado.Text) Else Paciente.EstadoCivil = "no especificado"
-If TxtOcupacion <> "ocupación" Then Paciente.Ocupacion = Trim(TxtOcupacion.Text) Else Paciente.Ocupacion = "no especificado"
-If Txthijos <> "3" Then Paciente.NumeroHijos = CLng(Txthijos.Text) Else Paciente.NumeroHijos = 0
+If LCase(Txtestado.Text) <> "estado civil" Then Paciente.EstadoCivil = Trim(Txtestado.Text) Else Paciente.EstadoCivil = "no especificado"
+If LCase(Txtocupacion.Text) <> "ocupacion" Then Paciente.Ocupacion = Trim(Txtocupacion.Text) Else Paciente.Ocupacion = "no especificado"
+If Txthijos.Text <> "3" Then Paciente.NumeroHijos = CLng(Txthijos.Text) Else Paciente.NumeroHijos = 0
 
+'guardamos los datos ingresados
 result = GuardaPaciente(Paciente, -1)
 
+'limpiamos el formulario si los datos inresados fueron correctos
+
+
+End Sub
+
+Private Sub Form_Load()
+
+    Set cShadow = New ClsShadow
+    cShadow.Margin = 1
+    cShadow.ShowBorders Picture1.hWnd, True
+    
 End Sub
 
 Private Sub Txtapellido_Change()
@@ -595,25 +710,25 @@ End Sub
 
 Private Sub TxtEstado_Change()
 
-If TxtEstado.Text <> "estado civil" Then
-    TxtEstado.ForeColor = &H80000008
+If Txtestado.Text <> "estado civil" Then
+    Txtestado.ForeColor = &H80000008
 Else
-    TxtEstado.ForeColor = &HE0E0E0
+    Txtestado.ForeColor = &HE0E0E0
 End If
 
 End Sub
 
 Private Sub TxtEstado_GotFocus()
 
-TxtEstado.SelStart = 0
-TxtEstado.SelLength = Len(TxtEstado.Text)
+Txtestado.SelStart = 0
+Txtestado.SelLength = Len(Txtestado.Text)
 
 End Sub
 
 Private Sub TxtEstado_KeyPress(KeyAscii As Integer)
 
 If KeyAscii = 13 Then
-    TxtOcupacion.SetFocus
+    Txtocupacion.SetFocus
 End If
 
 End Sub
@@ -720,18 +835,18 @@ End Sub
 
 Private Sub TxtOcupacion_Change()
 
-If TxtOcupacion.Text <> "ocupación" Then
-    TxtOcupacion.ForeColor = &H80000008
+If Txtocupacion.Text <> "ocupación" Then
+    Txtocupacion.ForeColor = &H80000008
 Else
-    TxtOcupacion.ForeColor = &HE0E0E0
+    Txtocupacion.ForeColor = &HE0E0E0
 End If
 
 End Sub
 
 Private Sub TxtOcupacion_GotFocus()
 
-TxtOcupacion.SelStart = 0
-TxtOcupacion.SelLength = Len(TxtOcupacion.Text)
+Txtocupacion.SelStart = 0
+Txtocupacion.SelLength = Len(Txtocupacion.Text)
 
 End Sub
 
@@ -763,7 +878,7 @@ End Sub
 Private Sub Txtotrocel_KeyPress(KeyAscii As Integer)
 
 If KeyAscii = 13 Then
-    TxtEstado.SetFocus
+    Txtestado.SetFocus
 End If
 
 End Sub
